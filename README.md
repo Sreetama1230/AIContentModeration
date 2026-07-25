@@ -1,7 +1,25 @@
+
+
 ## Content Moderation
 
 The AI Content Moderation Service analyzes blog posts before they are published to help prevent harmful or inappropriate content from entering the platform.
 
+
+                REST API
++------------------------------+
+|      BlogPost Service        |
++------------------------------+
+              |
+              | HTTP
+              v
++------------------------------+
+| Content Moderation Service   |
++------------------------------+
+              |
+              | HTTPS
+              v
+      Google Gemini API
+      
 ### How it Works
 
 1. The BlogPost service sends the blog title, content, and categories to the AI Content Moderation Service.
@@ -18,3 +36,4 @@ The AI Content Moderation Service analyzes blog posts before they are published 
 * Google Gemini API
 * REST APIs
 
+BlogPostService GitHub Link - https://github.com/Sreetama1230/blogpost_application

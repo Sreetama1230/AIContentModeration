@@ -2,10 +2,12 @@
 
 ## Content Moderation
 
-The AI Content Moderation Service analyzes blog posts before they are published to help prevent harmful or inappropriate content from entering the platform.
+The AI Content Moderation Service is a dedicated Spring Boot microservice responsible for analyzing blog content before publication. It communicates with the BlogPost service through REST APIs and uses the Google Gemini API to determine whether submitted content complies with predefined safety guidelines.
 
+ GitHub Link- [BlogPostApplication](https://github.com/Sreetama1230/blogpost_application)
 
-                REST API
+ ```
+          REST API
 +------------------------------+
 |      BlogPost Service        |
 +------------------------------+
@@ -19,7 +21,8 @@ The AI Content Moderation Service analyzes blog posts before they are published 
               | HTTPS
               v
       Google Gemini API
-      
+
+```
 ### How it Works
 
 1. The BlogPost service sends the blog title, content, and categories to the AI Content Moderation Service.
@@ -36,4 +39,3 @@ The AI Content Moderation Service analyzes blog posts before they are published 
 * Google Gemini API
 * REST APIs
 
-BlogPostService GitHub Link - https://github.com/Sreetama1230/blogpost_application

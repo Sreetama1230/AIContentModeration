@@ -1,7 +1,18 @@
+version: "3.8"
+
 services:
-  ai-content-moderation:
+  app:
     build: .
-    ports:
-      - "8089:8089"
     environment:
       GEMINI_API_KEY: ${GEMINI_API_KEY}
+    ports:
+      - "8089:8089"
+    networks:
+      - s-network
+
+networks:
+  s-network:
+    driver: bridge
+
+volumes:
+  mysql-s-data:
